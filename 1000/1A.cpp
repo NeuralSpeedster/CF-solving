@@ -3,10 +3,12 @@
 using namespace std;
 
 int main() {
-    int n, m, a;
+    size_t n, m, a;
     cin >> n >> m >> a;
-    int cn = 1 + n / a;
-    int cm = 1 + m / a;
+    size_t cn = n / a;
+    size_t cm  = m / a;
+    if (n % a) cn++;
+    if (m % a) cm++;
     cout << cn * cm << endl;
     return 0;
 }
